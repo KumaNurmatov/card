@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Aigerim Seiitkulova · WeChat</title>
+<style>
+  :root { --bg:#f2f3f5; --card:#fff; --ink:#111; --mute:#5f5f5f; --green:#07c160; --line:#e6e6e6; }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--bg); color:var(--ink);
+         font:16px/1.4 -apple-system, "PingFang SC", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+  .wrap { max-width:420px; margin:0 auto; padding:24px 16px 40px; }
+  .card { background:var(--card); border-radius:16px; padding:24px 20px; text-align:center; }
+  h1 { font-size:24px; margin:0 0 4px; }
+  .phone { color:var(--mute); margin:0 0 20px; }
+  .qr { width:100%; max-width:280px; display:block; margin:0 auto; border:1px solid var(--line); border-radius:12px; }
+  .hint { color:var(--mute); font-size:14px; margin:12px 0 20px; }
+  .btn { display:block; width:100%; padding:15px; margin:10px 0 0; border:0; border-radius:12px;
+         font:600 17px/1.35 inherit; font-family:inherit; text-decoration:none; cursor:pointer;
+         background:#f2f3f5; color:var(--ink); }
+  .btn.main { background:var(--green); color:#fff; }
+  .btn small { display:block; font-weight:400; font-size:13px; opacity:.75; margin-top:3px; }
+  .steps { text-align:left; background:var(--card); border-radius:16px; padding:18px 20px; margin-top:14px; font-size:15px; }
+  .steps b { display:block; margin-bottom:8px; }
+  .steps ol { margin:0; padding-left:20px; }
+  .steps li { margin:6px 0; }
+  .toast { position:fixed; left:50%; bottom:30px; transform:translateX(-50%); background:#000c; color:#fff;
+           padding:10px 18px; border-radius:20px; font-size:15px; opacity:0; transition:opacity .2s; pointer-events:none; }
+  .toast.on { opacity:1; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="card">
+    <h1>Aigerim Seiitkulova</h1>
+    <p class="phone">+996 702 310 333</p>
+    <img class="qr" id="qr" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAnAAAAJwAQAAAAAhaGEOAAAESUlEQVR4nO2di24bORRDR0T+/5dVOOOJXkx3QaqFdsMD1HbH5oETAYI0ulJKvXaCrbYrOh0YWUJ0OjCyhOh0YGQJ0enAyBKi04GRJUSnAyNLiE4HRpYQnQ6MLCG6/+vv7uN+KsPF+r5S34/tE/eV9olG/Q/8sIhOBnqUEZ0OjOxP1308L9p9vL5He/Vvrae7/72ul8/nOXP6D4voZKBHGdHpwMj+dN3HRfq59v9nfFeGXu0Z5V1L5uwfFtHJQI8yotOBkf3puo/fvfmM5a5hflv+3rdDdDLQo4zodGBkCdH9kf6ufvVxzwjvn3q7K01hACe8Ep0OjCwhuhPHd7W7PM5T2R28m7l6Ly2rAyNLiE4HRpYQ3Xn9XZneeOaudejpWo930bFeWlYHRpYQnQ6MLCG6Y3535bv9Ff0Ibn79/Z4M7P12iE4GepQRnQ6MLCG6DfV39av+pN2ze1YrnveuqQavZD67EeyUXdEZwAmvRHfa+K6Q0VvrA/vr/P5dSb2xDXxFT3Q6MLKE6E6sNy7vV22E1/d4/V6L1veVaZSXltWBkSVEpwMjS4juzPXZ8n6+abPbee22n9GW4f20rA6MLCE6HRhZQnRn7q+oX8/jXLa/n3dTh/20bYSXltWBkSVEpwMjS4juzPXZMlSa1G8fWx9YppluWlYHRpYQnQ6MLCG6U+tRyufjOL7r6+z4uSgl47sNYIekEZ0OjCwhuvPOg6pDJcp4EtQ4ex3rj0fSsjowsoTodGBkCdGd1t/VaffYetrTvzv3HXu/HaKTgR5lRKcDI0uIbsN8ttDR29wHPq8vchfvRZpCB0aWEJ0OjCwhuhPPNy7D+U+NeRfFWKFch8+nZXVgZAnR6cDIEqI7b72iTDvE1gqUcWR30++5eJGW1YGRJUSnAyNLiO7k8z4LqbVb57Zl2nuR+awLbMNAdDowsoTozuzvytCvjZUmz7V22nG56rJCm5bVgZElRKcDI0uI7sTzAq5pf8W6RjGvUtTl9JS0rA6MLCE6HRhZQnTn1aOUbnb6+xPd179KVv7Ut0N0MtCjjOh0YGQJ0W0Y39Vlj9h6Rsr8V2jXu3tpCh0YWUJ0OjCyhOhOP9+4vJ/XGe59tUxVKenvfLDB0RGdDowsIboT6+8a9duTPvvPlanPe5GW1YGRJUSnAyNLiO7E8z4f2n269bz2ef32mj6RltWBkSVEpwMjS4juvPXZupyNwmuM5xNTrsxnN4FdopvodGBkCdGdXG88rryOJ3ryarwr89kNYIekEZ0OjCwhutP7u9rVprQer5B5bv18zHqFDzY4OqLTgZElRHfm369g3Lso+nME+rFffb/OeoUPNjg6otOBkSVEd15/V4bLrQ5vvJe31uPVnBewCewS3USnAyNLiO70+jsVyElKdDowsoTodGBkCdHpwMgSotOBkSVEpwMjS4hOB0aWEJ0OjCwhOh0YWUJ0Omf/7n4BPOMBBv4hVIIAAAAASUVORK5CYII=" alt="WeChat QR">
+    <p class="hint">Scan with WeChat to add me<br>用微信扫一扫，加我为好友</p>
+
+    <a class="btn main" id="save" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAnAAAAJwAQAAAAAhaGEOAAAESUlEQVR4nO2di24bORRDR0T+/5dVOOOJXkx3QaqFdsMD1HbH5oETAYI0ulJKvXaCrbYrOh0YWUJ0OjCyhOh0YGQJ0enAyBKi04GRJUSnAyNLiE4HRpYQnQ6MLCG6/+vv7uN+KsPF+r5S34/tE/eV9olG/Q/8sIhOBnqUEZ0OjOxP1308L9p9vL5He/Vvrae7/72ul8/nOXP6D4voZKBHGdHpwMj+dN3HRfq59v9nfFeGXu0Z5V1L5uwfFtHJQI8yotOBkf3puo/fvfmM5a5hflv+3rdDdDLQo4zodGBkCdH9kf6ufvVxzwjvn3q7K01hACe8Ep0OjCwhuhPHd7W7PM5T2R28m7l6Ly2rAyNLiE4HRpYQ3Xn9XZneeOaudejpWo930bFeWlYHRpYQnQ6MLCG6Y3535bv9Ff0Ibn79/Z4M7P12iE4GepQRnQ6MLCG6DfV39av+pN2ze1YrnveuqQavZD67EeyUXdEZwAmvRHfa+K6Q0VvrA/vr/P5dSb2xDXxFT3Q6MLKE6E6sNy7vV22E1/d4/V6L1veVaZSXltWBkSVEpwMjS4juzPXZ8n6+abPbee22n9GW4f20rA6MLCE6HRhZQnRn7q+oX8/jXLa/n3dTh/20bYSXltWBkSVEpwMjS4juzPXZMlSa1G8fWx9YppluWlYHRpYQnQ6MLCG6U+tRyufjOL7r6+z4uSgl47sNYIekEZ0OjCwhuvPOg6pDJcp4EtQ4ex3rj0fSsjowsoTodGBkCdGd1t/VaffYetrTvzv3HXu/HaKTgR5lRKcDI0uIbsN8ttDR29wHPq8vchfvRZpCB0aWEJ0OjCwhuhPPNy7D+U+NeRfFWKFch8+nZXVgZAnR6cDIEqI7b72iTDvE1gqUcWR30++5eJGW1YGRJUSnAyNLiO7k8z4LqbVb57Zl2nuR+awLbMNAdDowsoTozuzvytCvjZUmz7V22nG56rJCm5bVgZElRKcDI0uI7sTzAq5pf8W6RjGvUtTl9JS0rA6MLCE6HRhZQnTn1aOUbnb6+xPd179KVv7Ut0N0MtCjjOh0YGQJ0W0Y39Vlj9h6Rsr8V2jXu3tpCh0YWUJ0OjCyhOhOP9+4vJ/XGe59tUxVKenvfLDB0RGdDowsIboT6+8a9duTPvvPlanPe5GW1YGRJUSnAyNLiO7E8z4f2n269bz2ef32mj6RltWBkSVEpwMjS4juvPXZupyNwmuM5xNTrsxnN4FdopvodGBkCdGdXG88rryOJ3ryarwr89kNYIekEZ0OjCwhutP7u9rVprQer5B5bv18zHqFDzY4OqLTgZElRHfm369g3Lso+nME+rFffb/OeoUPNjg6otOBkSVEd15/V4bLrQ5vvJe31uPVnBewCewS3USnAyNLiO70+jsVyElKdDowsoTodGBkCdHpwMgSotOBkSVEpwMjS4hOB0aWEJ0OjCwhOh0YWUJ0Omf/7n4BPOMBBv4hVIIAAAAASUVORK5CYII=" download="wechat-aigerim.png">
+      Save QR code · 保存二维码
+    </a>
+    <a class="btn" href="weixin://">Open WeChat · 打开微信<small>Scan → Album · 扫一扫 → 相册</small></a>
+    <button class="btn" id="copy">Copy phone · 复制手机号<small>WeChat → Add contacts → search · 微信搜索手机号</small></button>
+    <a class="btn" href="tel:+996702310333">Call · 拨打电话</a>
+    <a class="btn" href="https://wa.me/996702310333">WhatsApp</a>
+    <a class="btn" href="data:text/vcard;base64,QkVHSU46VkNBUkQKVkVSU0lPTjozLjAKRk46QWlnZXJpbSBTZWlpdGt1bG92YQpURUw7VFlQRT1DRUxMOis5OTY3MDIzMTAzMzMKTk9URTpXZUNoYXQgaHR0cHM6Ly91LndlY2hhdC5jb20va0FDR2tIc3BaZWlPc2tGek1sZ2pEVnM/cz0yCkVORDpWQ0FSRAo=" download="aigerim.vcf">Save contact · 保存联系人</a>
+  </div>
+
+  <div class="steps">
+    <b>How to add on WeChat · 如何添加微信</b>
+    <ol>
+      <li>Press and hold the QR code → Save image<br>长按二维码 → 保存图片</li>
+      <li>Open WeChat → ⊕ → Scan<br>打开微信 → ⊕ → 扫一扫</li>
+      <li>Tap the album icon, choose the saved QR<br>点击右下角相册，选择二维码</li>
+    </ol>
+  </div>
+</div>
+<div class="toast" id="toast">Copied · 已复制</div>
+<script>
+  document.getElementById('copy').onclick = function () {
+    var t = '+996702310333', done = function () {
+      var el = document.getElementById('toast'); el.classList.add('on');
+      setTimeout(function () { el.classList.remove('on'); }, 1500);
+    };
+    if (navigator.clipboard) navigator.clipboard.writeText(t).then(done, fallback); else fallback();
+    function fallback() {
+      var i = document.createElement('input'); i.value = t; document.body.appendChild(i);
+      i.select(); document.execCommand('copy'); i.remove(); done();
+    }
+  };
+</script>
+</body>
+</html>
