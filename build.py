@@ -4,10 +4,10 @@ import pathlib
 OUT = pathlib.Path(__file__).parent
 
 PEOPLE = [
-    ("kanykei", "Kanykei Kazieva", "+996501337773"),
-    ("aigerim", "Aigerim Seiitkulova", "+996702310333"),
-    ("rakhat", "Rakhat Omurbekova", "+996558635885"),
-    ("erlan", "Mr. Erlan Seiitkulov", "+996555474719"),
+    ("kanykei", "Kanykei", "+996501337773"),
+    ("aigerim", "Aigerim", "+996702310333"),
+    ("rakhat", "Rakhat", "+996558635885"),
+    ("erlan", "Erlan", "+996555474719"),
 ]
 
 TEMPLATE = open(OUT / "template.html", encoding="utf-8").read()
